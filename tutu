@@ -20,6 +20,6 @@ while True:
     if keys[pygame.K_RIGHT] and Position_X < 800 - 100:
         posX += move
 
-    Screen.blit(player, (posX, posY))
+    Screen.blit(player, (Position_X, Position_Y))
     #Screen.blit(Background, (0, 0))
    # pygame.display.update()
