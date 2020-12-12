@@ -1,1 +1,25 @@
-print('Kuy')
+import pygame
+
+pygame.init()
+Screen = pygame.display.set_mode((800, 600))
+pygame.display.set_caption("KFC[Kentucky Fight Championship]")
+#Symbol = pygame.image.load("Fred.jpg")
+#pygame.display.set_icon(Symbol)
+#Background = pygame.image.load("Arena.jpg")
+Position_X = 350
+Position_Y = 400
+move = 5
+
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            quit()
+
+    if keys[pygame.K_LEFT] and Position_X > 0:
+        posX -= move
+    if keys[pygame.K_RIGHT] and Position_X < 800 - 100:
+        posX += move
+
+    Screen.blit(player, (posX, posY))
+    #Screen.blit(Background, (0, 0))
+   # pygame.display.update()
